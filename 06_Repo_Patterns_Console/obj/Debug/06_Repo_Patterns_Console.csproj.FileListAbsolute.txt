@@ -1,0 +1,10 @@
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\bin\Debug\06_Repo_Patterns_Console.exe.config
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\bin\Debug\06_Repo_Patterns_Console.exe
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\bin\Debug\06_Repo_Patterns_Console.pdb
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\obj\Debug\06_Repo_Patterns_Console.csproj.AssemblyReference.cache
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\obj\Debug\06_Repo_Patterns_Console.csproj.CoreCompileInputs.cache
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\obj\Debug\06_Repo_Patterns_Console.exe
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\obj\Debug\06_Repo_Patterns_Console.pdb
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\bin\Debug\06_Repo_Patterns_Repo.dll
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\bin\Debug\06_Repo_Patterns_Repo.pdb
+C:\Users\oneda\source\repos\CSharpFundamentals\06_Repo_Patterns_Console\obj\Debug\06_Repo_Patterns_Console.csproj.CopyComplete

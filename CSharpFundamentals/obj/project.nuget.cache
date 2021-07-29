@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "E1ZatoU/t+fOQuHVA4YUSJGERLJsYhRtok9opLXsy9+n6PfJ1QLpIZxBSL301kbCKZzjno7kcwII89jLcRyFbQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oneda\\source\\repos\\CSharpFundamentals\\CSharpFundamentals\\CSharpFundamentals.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oneda\\.nuget\\packages\\log4net\\2.0.8\\log4net.2.0.8.nupkg.sha512",
+    "C:\\Users\\oneda\\.nuget\\packages\\vanilla\\0.0.1-rc05\\vanilla.0.0.1-rc05.nupkg.sha512"
+  ],
+  "logs": []
+}
