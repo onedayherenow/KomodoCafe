@@ -13,7 +13,7 @@ namespace KomodoCafe_Repo
 	public class MenuItem
 	{
 		//properties
-		public string Number { get; set }
+		public string Number { get; set; }
 		public string Name { get; set; }
 		public string Description { get; set; }
 		public string Ingredients { get; set; }

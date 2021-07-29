@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using KomodoCafe_Repo;
 
-namespace _06_Repo_Patterns_Repo
+namespace KomodoCafe_Repo
 {
 	public class Menu_List_Repo
 	{
@@ -22,7 +22,7 @@ namespace _06_Repo_Patterns_Repo
 		}
 
 		//read
-		public List<MenuItem> GetContentList()   //returns whole list of menu items
+		public List<MenuItem> GetMenuItems()   //returns whole list of menu items, return type is list of MenuItem objects
 		{
 			return _menuList;   
 		}
@@ -77,7 +77,7 @@ namespace _06_Repo_Patterns_Repo
 
 
 		//helper method 
-		public MenuItem GetItemByNumber(string number)   //returns a member of the list
+		public MenuItem GetItemByNumber(string number)   //returns an object MenuItem of the list, .GetItemByNumber()
 		{
 			foreach (MenuItem item in _menuList)
 			{
