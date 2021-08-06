@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KomodoCafe_Repo
-
 {
 	class ProgramUI
 	{
@@ -48,14 +47,6 @@ namespace KomodoCafe_Repo
 						//view menu of all items
 						DisplayMenu();
 						break;
-					//case "3":
-					//	//view content by title
-					//	DisplayContentByTitle();
-					//	break;
-					//case "2":
-					//	//Update existing content
-					//	UpdateExistingContent();
-					//	break;
 					case "3":
 						//Delete existing item
 						DeleteExistingItem();
@@ -75,9 +66,6 @@ namespace KomodoCafe_Repo
 			}
 		}
 
-
-
-
 		//methods that we want to do something but not return anything from this method to menu (void)
 		//private so that they can be used inside this class by another method but not from outside this class
 
@@ -91,11 +79,11 @@ namespace KomodoCafe_Repo
 			newItem.Number = Console.ReadLine();
 
 			//name
-			Console.WriteLine("Enter the description for this item");
+			Console.WriteLine("Enter the name for this item");
 			newItem.Name = Console.ReadLine();
 
 			//description
-			Console.WriteLine("Enter the ingredients for this item");
+			Console.WriteLine("Enter the description for this item");
 			newItem.Description = Console.ReadLine();
 
 			//ingredients
@@ -107,14 +95,11 @@ namespace KomodoCafe_Repo
 			string inputPrice = Console.ReadLine();  //recieves the price input as a string and saves it into inputPrice
 			newItem.Price = double.Parse(inputPrice);  //we parse inputPrice into a double, and assign that value to price
 
-			
 			_menuRepo.AddItemToMenu(newItem);  //adds the new item with it's user-input-defined properties to the menu repo
 
 		}
 
-
-
-		//view current streamingcontent that is saved
+		//view current menu items that are saved to the whole menu
 		private void DisplayMenu()
 		{
 			Console.Clear(); //clears menu before we see all content
@@ -132,111 +117,6 @@ namespace KomodoCafe_Repo
 					$"Price: {item.Price}\n");
 			}
 		}
-
-		////view existing content by title
-		//private void DisplayContentByTitle()
-		//{
-		//	Console.Clear();
-		//	//prompt user to give me a title
-		//	Console.WriteLine("Enter Title of the content you would like to see");
-
-		//	//get the user's input
-		//	string title = Console.ReadLine();
-
-		//	//find content by the title
-		//	StreamingContent content = _contentRepo.GetContentByTitle(title);
-
-		//	// display said content if it isnt null
-		//	if (content != null)
-		//	{
-		//		Console.WriteLine($"Title: {content.Title}\n" +
-		//			$"Description: { content.Description}\n" +
-		//			$"Maturity Rating: {content.MaturityRating}\n" +
-		//			$"Stars: {content.StarRating}\n" +
-		//			$"Is Family Friendly: {content.IsFamilyFriendly}\n" +
-		//			$"Genre: {content.TypeOfGenre}");
-		//	}
-		//	else
-		//	{
-		//		Console.WriteLine("No content by that title");
-		//	}
-
-
-		//}
-
-		////update existing content
-
-		//private void UpdateExistingContent()
-		//{
-		//	//display all content
-		//	DisplayAllContent();
-
-		//	//ask for the title of the content to update
-		//	Console.WriteLine("Enter the title of the content you'd like to update");
-
-		//	//get that title
-		//	string oldTitle = Console.ReadLine();
-
-		//	//we will build a new object
-		//	StreamingContent newContent = new StreamingContent(); //we declare it first so that we can then use the property of object for user input
-
-		//	//title
-		//	Console.WriteLine("Enter the title for the content");
-		//	newContent.Title = Console.ReadLine();
-
-		//	//description
-		//	Console.WriteLine("Enter the description for the content");
-		//	newContent.Description = Console.ReadLine();
-
-		//	//maturity rating
-		//	Console.WriteLine("Enter the maturity rating for the content: (G, PG, PG-13, etc");
-		//	newContent.MaturityRating = Console.ReadLine();
-
-		//	//star rating
-		//	Console.WriteLine("Enter the star rating for the content: (5.8, 10, 1.5, etc)");
-		//	string starsAsString = Console.ReadLine();
-		//	newContent.StarRating = double.Parse(starsAsString);
-
-		//	//is familly friendly\
-		//	Console.WriteLine("Is this content family friendly?  (y/n)");
-		//	string familyFriendlyString = Console.ReadLine().ToLower();
-
-		//	if (familyFriendlyString == "y")
-		//	{
-		//		newContent.IsFamilyFriendly = true;
-		//	}
-		//	else
-		//	{
-		//		newContent.IsFamilyFriendly = false;
-		//	}
-
-		//	//genretype
-		//	Console.WriteLine("Enter the genre number: \n" +
-		//		"1. Horror\n " +
-		//		"2. RomCom\n " +
-		//		"3. SciFi\n " +
-		//		"4. Documentary\n " +
-		//		"5. Drama\n " +
-		//		"6. Action");
-
-		//	string genreAsString = Console.ReadLine();
-		//	int genreAsInt = int.Parse(genreAsString);
-		//	newContent.TypeOfGenre = (GenreType)genreAsInt;    //casting integer into enum by the enum's numerical value
-
-		//	//verify the update worked
-		//	//repo update method returns a bool if it was updated, if old title was not found (null) then returns false
-		//	bool wasUpdated = _contentRepo.UpdateExistingContent(oldTitle, newContent);
-
-		//	if (wasUpdated)
-		//	{
-		//		Console.WriteLine("Content successfully updated!");
-		//	}
-		//	else
-		//	{
-		//		Console.WriteLine("Could not update content/content to be replaced could not be found.");
-		//	}
-
-		//}
 
 		//delete existing content
 		private void DeleteExistingItem()
@@ -260,13 +140,11 @@ namespace KomodoCafe_Repo
 			else
 			{
 				Console.WriteLine("Menu item could not be deleted");
-			}
-
-			//otherwise state it could not be deleted
+			}	//otherwise state it could not be deleted
 		}
 
 
-		//Seed Method  --> will seed the content list so that we can have some stuff on the list, not an empty one
+		//Seed Method  --> will seed the content list so that we can have menu items already on the menu
 		private void SeedContentMenu()
 		{
 			MenuItem avocadoSalad = new MenuItem("1", "Avocado Salad", "Mixed greens, peppers, and avocado", 
@@ -274,10 +152,9 @@ namespace KomodoCafe_Repo
 			MenuItem misoSoup = new MenuItem("2", "Miso Soup", "Oriental-style miso soup", "miso, tofu, seaweed, green onions", 6.00);
 			MenuItem veggieBurger = new MenuItem("3", "Veggie Burger", "Vegetarian-patty burger", "bread, lettuce, onions, veggie-patty, sauce", 10.50);
 
-			_menuRepo.AddItemToMenu(avocadoSalad);
+			_menuRepo.AddItemToMenu(avocadoSalad);  //we created new menu items and added them to the repo with our repo add methods
 			_menuRepo.AddItemToMenu(misoSoup);
 			_menuRepo.AddItemToMenu(veggieBurger);
 		}
-
 	} //class
 } //namespace

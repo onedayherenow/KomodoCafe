@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 using KomodoCafe_Repo;
 
 namespace KomodoCafe_Repo
-{
-	
-	//POCO -- Plaing old Csharp object
-	//Simple object that holds data
+{	//POCO -- Plaing old Csharp object
 	public class MenuItem
 	{
 		//properties
@@ -19,12 +16,10 @@ namespace KomodoCafe_Repo
 		public string Ingredients { get; set; }
 		public double Price { get; set; }
 
-
 		//constructors
-
 		public MenuItem() {}
 		
-		//cant go out using title, can only go in,, scope
+		//loaded constructor where we assign every user input to a property
 		public MenuItem(string number, string name, string description, string ingredients, double price)
 		{
 			Number = number;
@@ -33,7 +28,5 @@ namespace KomodoCafe_Repo
 			Ingredients = ingredients;
 			Price = price; 
 		}
-
-	
 	}
 }

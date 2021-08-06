@@ -13,12 +13,10 @@ namespace KomodoCafe_Repo
 		//field usables in all crud methods, they can all use the same list in all methods, persisting object
 		//the methods need to be used outside, public
 
-
 		//create
 		public void AddItemToMenu(MenuItem item) //add streaming content to list, building entryways into our class
 		{
 			_menuList.Add(item);  //anything with an underscore and camelcase is a field
-			
 		}
 
 		//read
@@ -26,31 +24,6 @@ namespace KomodoCafe_Repo
 		{
 			return _menuList;   
 		}
-
-		////update 
-		//public bool UpdateExistingContent(string originalTitle, StreamingContent newContent) //object in second param, same object new values
-		//	//this replaces one object in the list for another
-		//{
-		//	//find the old object
-		//	StreamingContent oldContent = GetContentByTitle(originalTitle);
-
-		//	//update content,, is  possible we may get a null title if it doesnt exist
-		//	if (oldContent != null)
-		//	{
-		//		oldContent.Title = newContent.Title;
-		//		oldContent.Description = newContent.Description;
-		//		oldContent.MaturityRating = newContent.MaturityRating;
-		//		oldContent.StarRating = newContent.StarRating;
-		//		oldContent.IsFamilyFriendly = newContent.IsFamilyFriendly;
-		//		oldContent.TypeOfGenre = newContent.TypeOfGenre;
-		//		return true;
-		//	}
-		//	else
-		//	{
-		//		return false;
-		//	}
-		//}
-
 
 		//delete
 		public bool RemoveItemFromMenu(string number)
@@ -75,19 +48,17 @@ namespace KomodoCafe_Repo
 		}
 
 
-
 		//helper method 
 		public MenuItem GetItemByNumber(string number)   //returns an object MenuItem of the list, .GetItemByNumber()
 		{
-			foreach (MenuItem item in _menuList)
+			foreach (MenuItem item in _menuList)  //iterates through each item in the menu
 			{
-				if (item.Number == number)
+				if (item.Number == number)   //if the number is found, we return the item
 				{
-					return item;
+					return item; 
 				}
 			}
 			return null; //if we find it we return, if not return null
 		}
-
 	}
 }
